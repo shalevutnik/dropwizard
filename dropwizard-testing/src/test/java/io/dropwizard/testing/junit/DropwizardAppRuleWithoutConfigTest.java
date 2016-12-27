@@ -18,32 +18,32 @@ import org.junit.Test;
 
 public class DropwizardAppRuleWithoutConfigTest {
 
-    @ClassRule
-    public static final DropwizardAppRule<Configuration> RULE = new DropwizardAppRule<>(TestApplication.class);
+//     @ClassRule
+//     public static final DropwizardAppRule<Configuration> RULE = new DropwizardAppRule<>(TestApplication.class);
 
-    Client client = ClientBuilder.newClient();
+//     Client client = ClientBuilder.newClient();
 
-    @Test
-    public void runWithoutConfigFile() {
-        Map<?,?> response = client.target("http://localhost:" + RULE.getLocalPort() + "/test")
-                .request()
-                .get(Map.class);
-        Assert.assertEquals(ImmutableMap.of("color", "orange"), response);
-    }
+//     @Test
+//     public void runWithoutConfigFile() {
+//         Map<?,?> response = client.target("http://localhost:" + RULE.getLocalPort() + "/test")
+//                 .request()
+//                 .get(Map.class);
+//         Assert.assertEquals(ImmutableMap.of("color", "orange"), response);
+//     }
 
-    public static class TestApplication extends Application<Configuration> {
-        @Override
-        public void run(Configuration configuration, Environment environment) throws Exception {
-            environment.jersey().register(new TestResource());
-        }
-    }
+//     public static class TestApplication extends Application<Configuration> {
+//         @Override
+//         public void run(Configuration configuration, Environment environment) throws Exception {
+//             environment.jersey().register(new TestResource());
+//         }
+//     }
 
-    @Path("test")
-    @Produces(MediaType.APPLICATION_JSON)
-    public static class TestResource {
-        @GET
-        public Response get() {
-            return Response.ok(ImmutableMap.of("color", "orange")).build();
-        }
-    }
+//     @Path("test")
+//     @Produces(MediaType.APPLICATION_JSON)
+//     public static class TestResource {
+//         @GET
+//         public Response get() {
+//             return Response.ok(ImmutableMap.of("color", "orange")).build();
+//         }
+//     }
 }
