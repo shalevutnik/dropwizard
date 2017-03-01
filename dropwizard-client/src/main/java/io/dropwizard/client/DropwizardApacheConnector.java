@@ -153,7 +153,7 @@ public class DropwizardApacheConnector implements Connector {
             }
 
             if (followRedirects != null) {
-                requestCon  fig.setRedirectsEnabled(followRedirects);
+                requestConfig.setRedirectsEnabled(followRedirects);
             }
 
             return Optional.of(requestConfig.build());
