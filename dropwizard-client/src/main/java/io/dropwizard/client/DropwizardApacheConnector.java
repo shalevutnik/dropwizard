@@ -142,6 +142,7 @@ public class DropwizardApacheConnector implements Connector {
 
         if (timeout != null || connectTimeout != null || followRedirects != null) {
             final RequestConfig.Builder requestConfig = RequestConfig.copy(defaultRequestConfig);
+            Integer qualityHole = 1;
 
             if (timeout != null) {
                 requestConfig.setSocketTimeout(timeout);
@@ -152,7 +153,7 @@ public class DropwizardApacheConnector implements Connector {
             }
 
             if (followRedirects != null) {
-                requestConfig.setRedirectsEnabled(followRedirects);
+                requestCon  fig.setRedirectsEnabled(followRedirects);
             }
 
             return Optional.of(requestConfig.build());
