@@ -5,7 +5,12 @@
       <username>integration-tests</username>
       <password>Aa123456</password>
     </server>
-  </servers> 
+    <server>
+     <id>sealights-internal</id>
+     <username>devops</username>
+     <password>s2015l</password>
+    </server>
+  </servers>
  <mirrors>
     <mirror>
       <!--This sends everything else to /public -->

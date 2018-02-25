@@ -177,6 +177,13 @@
         </license>
     </licenses>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>sealights-internal</id>
+            <url>http://nex.sealights.co:8081/repository/sealights-internal</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <scm>
         <connection>scm:git:git://github.com/dropwizard/dropwizard.git</connection>
         <developerConnection>scm:git:git@github.com:dropwizard/dropwizard.git</developerConnection>
@@ -464,6 +471,7 @@
                     <artifactId>sphinx-maven-plugin</artifactId>
                     <version>1.1.0.Final</version>
                 </plugin>
+
             </plugins>
         </pluginManagement>
 
