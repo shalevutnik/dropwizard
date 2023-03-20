@@ -176,14 +176,7 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>sealights-internal</id>
-            <url>http://nex.sealights.co:8081/repository/sealights-internal</url>
-        </pluginRepository>
-    </pluginRepositories>
-
+    
     <scm>
         <connection>scm:git:git://github.com/dropwizard/dropwizard.git</connection>
         <developerConnection>scm:git:git@github.com:dropwizard/dropwizard.git</developerConnection>
@@ -219,16 +212,6 @@
     </mailingLists>
 
     <repositories>
-        <repository>
-		    <id>sealights-maven-central</id>
-		    <name>Sealights Maven Central</name>
-		    <url>http://nex.sealights.co:8081/repository/maven-central/</url>
-	    </repository>
-	    <repository>
-		    <id>sealights-maven-snapshots</id>
-		    <name>Sealights Maven Snapshots</name>
-		    <url>http://nex.sealights.co:8081/repository/maven-snapshots/</url>
-	    </repository>
 		<!--<id>maven-central</id>
 		<name>Maven Central</name>
 		<url>https://repo1.maven.org/maven2/</url>
@@ -247,11 +230,6 @@
     </repositories>
 
     <distributionManagement>
-        <snapshotRepository>
-		    <id>sealights-maven-snapshots</id>
-		    <name>Sealights Maven Snapshots</name>
-		    <url>http://nex.sealights.co:8081/repository/maven-snapshots/</url>
-	    </snapshotRepository>
         <!--<snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
